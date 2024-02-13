@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+{% for character in characters %}
+    <article>
+        <header>
+            <a href="{{character.url}}">
+            {{character.name}}
+            </a>
+        </header>
+        {# <ul>
+            <li>Year of bith : {{character.birth_year}}</li>
+            <li>Height : {{character.height}}</li>
+            <li>Weight : {{character.mass}}</li>
+            <li>Hair color : {{character.hair_color}}</li>
+            <li>Eye color : {{character.eye_color}}</li>
+            <li>skin color : {{character.skin_color}}</li>
+        </ul> #}
+    </article>
+{% endfor %}
+{% endblock %}
